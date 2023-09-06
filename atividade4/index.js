@@ -12,19 +12,19 @@ app.get("/somar/:a/:b", function (req, res) {
 app.get("/subtrair/:a/:b", function (req, res) {
     let a = req.params.a;
     let b = req.params.b;
-    res.send(`${a} + ${b} = ${calc.subtrair(a,b)}`);
+    res.send(`${a} - ${b} = ${calc.subtrair(a,b)}`);
 });
 
 app.get("/multiplicar/:a/:b", function (req, res) {
     let a = req.params.a;
     let b = req.params.b;
-    res.send(`${a} + ${b} = ${calc.multiplicar(a,b)}`);
+    res.send(`${a} * ${b} = ${calc.multiplicar(a,b)}`);
 });
 
 app.get("/dividir/:a/:b", function (req, res) {
     let a = req.params.a;
     let b = req.params.b;
-    res.send(`${a} + ${b} = ${calc.dividir(a,b)}`);
+    res.send(`${a} / ${b} = ${calc.dividir(a,b)}`);
 });
 
 const PORT = 8080;
