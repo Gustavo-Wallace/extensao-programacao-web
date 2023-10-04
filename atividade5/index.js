@@ -9,13 +9,7 @@ app.set('views', __dirname + '/views');
 app.use(express.urlencoded({extended: true}));
 
 app.get('/', function(req, res) {
-    let usuario = {
-        nome: "",
-        endereco: "",
-        telefone: "",
-        data: ""
-    };
-    res.render('agendamento.html', {usuario});
+    res.render('agendamento.html');
 });
 
 app.post('/dados', function(req, res) {
