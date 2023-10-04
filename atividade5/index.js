@@ -10,16 +10,20 @@ app.use(express.urlencoded({extended: true}));
 
 app.get('/', function(req, res) {
     let usuario = {
-        nome: "Gustavo",
-        telefone: 1231313
+        nome: "",
+        endereco: "",
+        telefone: "",
+        data: ""
     };
-    res.render('index.html', {usuario});
+    res.render('agendamento.html', {usuario});
 });
 
 app.post('/dados', function(req, res) {
     let usuario = {
         nome: req.body.nome,
-        telefone: req.body.telefone
+        endereco: req.body.endereco,
+        telefone: req.body.telefone,
+        data: req.body.data
     };
     res.render('dados.html', {usuario});
 });
