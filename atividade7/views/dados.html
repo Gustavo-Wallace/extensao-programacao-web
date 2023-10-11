@@ -12,34 +12,37 @@
 
 <body>
     <div class="container">
-        <div class="col-8 offset-2">
+        <div class="row mt-3">
             {{#erros}}
             <div class="alert alert-danger" role="alert">
-                {{this}}
+                <strong>{{this}}</strong>
             </div>
             {{/erros}}
 
             <h3>Dados do Agendamento</h3>
-            <h4>Dados Pessoais</h4>
-            <ul class="list-group">
-                <li class="list-group-item">Nome: {{dadosPessoais.nome}}</li>
-                <li class="list-group-item">CPF: {{dadosPessoais.cpf}}</li>
-                <li class="list-group-item">Data de Nascimento: {{dadosPessoais.data_nascimento}}</li>
-                <li class="list-group-item">Endereço: {{dadosPessoais.endereco}}</li>
-                <li class="list-group-item">UF: {{dadosPessoais.uf}}</li>
-                <li class="list-group-item">CEP: {{dadosPessoais.cep}}</li>
-                <li class="list-group-item">E-mail: {{dadosPessoais.email}}</li>
-                <li class="list-group-item">Telefone: {{dadosPessoais.telefone}}</li>
-            </ul>
-
-            <h4>Dados da Consulta</h4>
-            <ul class="list-group">
-                <li class="list-group-item">Especialidade Médica: {{dadosConsulta.especialidade}}</li>
-                <li class="list-group-item">Data da Consulta: {{dadosConsulta.data_consulta}}</li>
-                <li class="list-group-item">Hora da Consulta: {{dadosConsulta.hora_consulta}}</li>
-                <li class="list-group-item">Medicamentos Alergicos: {{dadosConsulta.medicamentos_alergicos}}</li>
-                <li class="list-group-item">Informações Adicionais: {{dadosConsulta.informacoes_adicionais}}</li>
-            </ul>
+            <div class="col-6">
+                <h4>Dados Pessoais</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">Nome: {{dadosPessoais.nome}}</li>
+                    <li class="list-group-item">CPF: {{dadosPessoais.cpf}}</li>
+                    <li class="list-group-item">Data de Nascimento: {{dadosPessoais.data_nascimento}}</li>
+                    <li class="list-group-item">Endereço: {{dadosPessoais.endereco}}</li>
+                    <li class="list-group-item">UF: {{dadosPessoais.uf}}</li>
+                    <li class="list-group-item">CEP: {{dadosPessoais.cep}}</li>
+                    <li class="list-group-item">E-mail: {{dadosPessoais.email}}</li>
+                    <li class="list-group-item">Telefone: {{dadosPessoais.telefone}}</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <h4>Dados da Consulta</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">Especialidade Médica: {{dadosConsulta.especialidade}}</li>
+                    <li class="list-group-item">Data da Consulta: {{dadosConsulta.data_consulta}}</li>
+                    <li class="list-group-item">Hora da Consulta: {{dadosConsulta.hora_consulta}}</li>
+                    <li class="list-group-item">Medicamentos Alergicos: {{dadosConsulta.medicamentos_alergicos}}</li>
+                    <li class="list-group-item">Informações Adicionais: {{dadosConsulta.informacoes_adicionais}}</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
