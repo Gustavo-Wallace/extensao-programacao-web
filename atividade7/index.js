@@ -12,10 +12,10 @@ let dadosPessoais = {};
 let dadosConsulta = {};
 
 app.get("/", function (req, res) {
-    res.render("dados_pessoais.html");
+    res.render("formulario.html");
 });
 
-app.post('/dados_pessoais', function (req, res) {
+app.post('/dados', function (req, res) {
     dadosPessoais = {
         nome: req.body.nome,
         cpf: req.body.cpf,
@@ -27,19 +27,14 @@ app.post('/dados_pessoais', function (req, res) {
         telefone: req.body.telefone
     };
 
-    res.redirect("/dados_consulta");
-});
-
-app.get("/dados_consulta", function (req, res) {
-    res.render("dados_consulta.html");
-});
-
-app.post('/dados_consulta', function (req, res) {
     dadosConsulta = {
         especialidade: req.body.especialidade,
         data_consulta: req.body.data_consulta,
         hora_consulta: req.body.hora_consulta,
-        medicamentos_alergicos: req.body.medicamentos_alergicos,
+        antibioticos: req.body.antibioticos,
+        analgesicos: req.body.analgesicos,
+        anti_inflamatorios: req.body.anti_inflamatorios,
+        anticonvulsivantes: req.body.anticonvulsivantes,
         informacoes_adicionais: req.body.informacoes_adicionais
     };
 
@@ -59,7 +54,7 @@ app.post('/dados_consulta', function (req, res) {
         }
     }
 
-    res.render('dados.html', { dadosPessoais, dadosConsulta, erros: erros });
+    res.redirect('dados.html', { dadosPessoais, dadosConsulta, erros});
 });
 
 const PORT = 8080;
